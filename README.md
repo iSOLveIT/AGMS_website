@@ -1,4 +1,4 @@
-# WEBSITE WRITTEN WITH PYTHON FLASK
+# WEB APP
 
 ## Installation
 
