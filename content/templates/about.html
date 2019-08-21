@@ -1,0 +1,343 @@
+{% extends 'base.html'%}
+
+{% block title %} <title>Our School | AGMS</title> {% endblock %}
+
+{% block content %}
+
+
+<!--Start Nav-->
+<nav class="navbar navbar-expand-lg ftco-navbar-light" id="ftco-navbar" style=" background: linear-gradient(to right, #9603bb, #f005d0);">
+<div  class="container d-flex align-items-center">
+	<a class="navbar-brand" href="{{url_for('index')}} ">
+	<img src="../static/images/banner/brand.png " width="150" height="100" alt="AMAZING GRACE MONTESSORI SCHOOL">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="color:#ffffff;">
+	<span class="oi oi-menu" style="color:#ffffff;"></span> Menu
+	</button>
+	<div class="collapse navbar-collapse" id="ftco-nav">
+	<ul class="navbar-nav ml-auto" >
+		<li class="nav-item"><a href="/home" class="nav-link" > Home</a></li>
+		<li class="nav-item active"><a href="/about" class="nav-link">Our School</a></li>
+		<li class="nav-item"><a href="/admission" class="nav-link">Admission</a></li>
+		<li class="nav-item submenu dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
+		<ul class="dropdown-menu" >
+			<li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/gallery/future_career" style="color: #9603bb;">Future Career Day</a></li>
+			<li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/gallery/culture_awareness" style="color: #9603bb;">Culture Awareness Day</a></li>
+			<li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/gallery/sch_album" style="color: #9603bb;">Album</a></li>
+		</ul>
+		</li>
+		<li class="nav-item submenu dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academics</a>
+		<ul class="dropdown-menu" >
+			<li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/academics/calendar" style="color: #9603bb;">Calendar</a></li>
+		</ul>
+		</li>
+		<li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+	</ul>
+	</div>
+</div>
+</nav>
+<!-- END nav -->
+		  
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('../static/images/banner/banner_2.png');">
+		<div class="overlay"></div>
+		<div class="container">
+		<div class="row no-gutters slider-text align-items-center justify-content-center">
+			<div class="col-md-9 ftco-animate text-center">
+				<h1 class="mb-2 bread" style="text-shadow: 2px 2px 7px #000000;">Our School</h1>
+				<p class="breadcrumbs" style="text-shadow: 2px 2px 7px #000000;"><span class="mr-2"><a href="/home" >Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Our School<i class="ion-ios-arrow-forward"></i></span></p>
+			</div>
+		</div>
+		</div>
+		</section>
+
+		<br><br>
+		<section class="ftco-section ftco-no-pt ftc-no-pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+          				<h1 class="section_title mb-4">Overview of Amazing Grace Montessori School</h1>
+						<p>A Christian School founded on 14th September, 2015, with the core value of educating children in the fear of the Lord.</p>
+						
+						<div>
+							<h3 class="mb-4"><span class="icon icon-flag" style="background-color: #ffffff; color:#9603bb;"></span> 
+								Our Mission</h3>
+							<div>
+								<p>
+										To provide the child with the opportunity to acquire an education founded on the educational philosophy of Dr. Maria Montessori blended with
+										the Ghana Education Service curricular and the Good News of our Lord Jesus Christ.
+								</p>
+							</div>
+						</div>
+						
+						
+						<h3 class="mb-4">What We Offer</h3>
+						<div class="row mt-5">
+							<div class="col-lg-6">
+								<div class="services-2 d-flex">
+									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
+									<div class="text">
+										<h3>Safety</h3>
+										<p>Safety First is Safety Always</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="services-2 d-flex">
+									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
+									<div class="text">
+										<h3>Regular Classes</h3>
+										<p>Providing consistent, well organised and discipline classes</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="services-2 d-flex">
+									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
+									<div class="text">
+										<h3>Certified Teachers</h3>
+										<p>Providing professionals who are passionate about the children</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="services-2 d-flex">
+									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
+									<div class="text">
+										<h3>Sufficient Classrooms</h3>
+										<p>Adequate and ample classrooms to facilitate teaching and learning</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="services-2 d-flex">
+									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
+									<div class="text">
+										<h3>Creative Lessons</h3>
+										<p>Providing innovative and experimental lessons</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="services-2 d-flex">
+									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
+									<div class="text">
+										<h3>Playing Facilities</h3>
+										<p>Providing playgrounds with recreational equipments</p>
+									</div>
+								</div>
+							</div>		
+						</div>
+					</div>
+					<div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light" style="height:900px;">
+						<div class="text px-4 ftco-animate">
+							<h1 class="section_title">AGMS ANTHEM</h1><br>
+							<p>There is a wondrous school in our generation.</p>
+							<p>The name of the school is Amazing Grace.</p>
+							<p>We will train up your child in the way he should go, when he grows he will never depart from it.</p>
+							<p>We are God fearing, hardworking.</p>
+							<p>We are motivated.</p>
+							<p>We are united.</p>
+							<p>We are dedicated to excellence.</p>
+							<p>We will train up your child in the way he should go.</p>
+							<p>Amazing Grace we will train up your child.</p>
+							<p>Amazing Grace we will train up your child.</p>
+							<p>We will train up your child in the way he should go, when he grows he will never depart from it.</p>
+						</div>
+					</div>
+					
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pb">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4" style="color: #f005d0;"><span style="color:#9603bb;">Management</span> and Staff</h2>
+					<p>Meet Our Handworking and Commited Management and Staff who are passionate about children and highly concerned about how they contribute to each child’s future</p>
+				</div>
+			</div>
+			<div class="card-deck">
+				<div class="card">
+					<img src="../static/images/teachers/osei.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Uncle Osei</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/josephine.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Josephine</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/charlotte.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Charlotte</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/agnes.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Agnes</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/nuzrat.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Nuzrat</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/rich.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Uncle Richard</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-deck">
+				<div class="card">
+					<img src="../static/images/teachers/emma.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Uncle Emma</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/gifty.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Gifty</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/sammy.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Uncle Sammy</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/lizzy.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Lizzy</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/theo.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Uncle Theo</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/christy.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Christy</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-deck">
+				<div class="card">
+					<img src="../static/images/teachers/celestina.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Tina</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/esther.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Esther</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/gloria.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Gloria</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/mandy.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Mandy</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/ewurama.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Ewurama</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/vic.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Vic</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+			</div>
+			<div class="card-deck">
+				<div class="card">
+					<img src="../static/images/teachers/dorcas.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Dorcas</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/salomey.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Salomey</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/jane.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Jane</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/matilda.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Matilda</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/christy2.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Aunt Christy</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="../static/images/teachers/randy.png" class="card-img-top" alt="">
+					<div class="card-body">
+						<h5 class="card-title">Uncle Randy</h5>
+						<p class="card-text">Staff</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+{% endblock %}

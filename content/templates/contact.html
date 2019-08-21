@@ -1,0 +1,155 @@
+{% extends 'base.html'%}
+
+{% block title %} <title>Contact | AGMS</title> {% endblock %}
+
+{% block content %}
+
+
+<!--Start Nav-->
+<nav class="navbar navbar-expand-lg ftco-navbar-light" id="ftco-navbar" style=" background: linear-gradient(to right, #9603bb, #f005d0);">
+    <div  class="container d-flex align-items-center">
+      <a class="navbar-brand" href="/home">
+        <img src="../static/images/banner/brand.png" width="150" height="100" alt="AMAZING GRACE MONTESSORI SCHOOL">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="color:#ffffff;">
+        <span class="oi oi-menu" style="color:#ffffff;"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto" >
+          <li class="nav-item"><a href="/home" class="nav-link" > Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">Our School</a></li>
+          <li class="nav-item"><a href="/admission" class="nav-link">Admission</a></li>
+          <li class="nav-item submenu dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
+            <ul class="dropdown-menu" >
+                <li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/gallery/future_career" style="color: #9603bb;">Future Career Day</a></li>
+                <li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/gallery/culture_awareness" style="color: #9603bb;">Culture Awareness Day</a></li>
+                <li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/gallery/sch_album" style="color: #9603bb;">Album</a></li>
+            </ul>
+          </li>
+          <li class="nav-item submenu dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academics</a>
+            <ul class="dropdown-menu" >
+                <li class="nav-item" style="margin-left:15px;"><a class="nav-link" href="/academics/calendar" style="color: #9603bb;">Calendar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item active"><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- END nav -->
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../static/images/banner/banner_2.png');">
+<div class="overlay"></div>
+<div class="container">
+<div class="row no-gutters slider-text align-items-center justify-content-center">
+  <div class="col-md-9 ftco-animate text-center">
+    <h1 class="mb-2 bread" style="text-shadow: 2px 2px 7px #000000;">Contact Us</h1>
+    <p class="breadcrumbs" style="text-shadow: 2px 2px 7px #000000;"><span class="mr-2"><a href="/home" >Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+  </div>
+</div>
+</div>
+</section>
+<br>
+
+<!-- Contact -->
+
+<div class="contact">
+  <div class="container">
+    <div class="row">
+
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <div class="contact_info">
+          <div class="section_title">Get in touch with us</div>
+          <div class="contact_info_content">
+            <ul class="contact_info_list">
+              <li>
+                <div>Address:</div>
+                <div>Off Mama Lagos Road, Lybia, Agona Swedru, Central Region, Ghana</div>
+              </li>
+              <li>
+                  <div>Digital Address:</div>
+                  <div>CO-0013-2186</div>
+                </li>
+              <li>
+                <div>Phone:</div>
+                <div>+233 54 793 9491</div>
+                <div>+233 20 667 0703</div>
+              </li>
+              <li>
+                <div>Email:</div>
+                <div>agmschool.management@gmail.com</div>
+              </li>
+            </ul><br>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="container">
+          <!--Flash Messages-->
+          <div class="container">{% include 'includes/_message.html'%}</div>
+          <div class="section_title">Contact Form</div><br>
+          <form action=" " method="POST" class="contact_form" id="contact_form">
+              <!-- Name -->
+              <div class="col-lg-10">
+                {% if form.name.errors %}
+                  {{ form.name(class= "form-control is-invalid contact_input", placeholder="Name")}}
+                  <div class="invalid-feedback">
+                    {% for error in form.name.errors %}
+                      <span>{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  {{ form.name(class= "form-control contact_input", placeholder="Name")}}
+                {% endif %}
+              </div>
+              <!-- Email -->
+              <div class="col-lg-10">
+                {% if form.e_mail.errors %}
+                  {{ form.e_mail(class= "form-control is-invalid contact_input", placeholder="Email Address")}}
+                  <div class="invalid-feedback">
+                    {% for error in form.e_mail.errors %}
+                      <span>{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  {{ form.e_mail(class= "form-control contact_input", placeholder="Email Address")}}
+                {% endif %}
+              </div>
+              <div class="col-lg-10">
+                {% if form.subject.errors %}
+                  {{ form.subject(class= "form-control is-invalid contact_input", placeholder="Subject")}}
+                  <div class="invalid-feedback">
+                    {% for error in form.subject.errors %}
+                      <span>{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  {{ form.subject(class= "form-control contact_input", placeholder="Subject")}}
+                {% endif %}
+              </div>
+            <div class="col-lg-10">
+              {% if form.message.errors %}
+                {{ form.message(class= "form-control is-invalid contact_input", placeholder="Message")}}
+                <div class="invalid-feedback">
+                  {% for error in form.message.errors %}
+                    <span>{{ error }}</span>
+                  {% endfor %}
+                </div>
+              {% else %}
+                {{ form.message(class= "form-control contact_input", placeholder="Message", height="200px")}}
+              {% endif %}
+            </div>
+            <input type="submit" value="Submit" class="btn btn-secondary px-4 py-3" style="text-shadow: 2px 2px 7px #000000; background: linear-gradient(to right, #9603bb, #f005d0); border: thin #f005d0; ">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
