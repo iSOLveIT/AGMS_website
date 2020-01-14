@@ -1,0 +1,83 @@
+{% extends 'base.html'%}
+
+{% block title %} <title>Contact | AGMS</title> {% endblock %}
+
+{% block content %}
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url(https://drive.google.com/uc?export=view&id=1ObTZ_408sLpqU65d9ObOuEIINhTiPBTZ);">
+<div class="overlay"></div>
+<div class="container">
+<div class="row no-gutters slider-text align-items-center justify-content-center">
+  <div class="col-md-9 ftco-animate text-center">
+    <h1 class="mb-2 bread" style="text-shadow: 2px 2px 7px #000000;">Contact Us</h1>
+    <p class="breadcrumbs" style="text-shadow: 2px 2px 7px #000000;"><span class="mr-2"><a href="/home" >Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+  </div>
+</div>
+</div>
+</section>
+<br>
+
+<!-- Contact -->
+
+<div class="contact">
+  <div class="container">
+    <div class="row">
+
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <div class="contact_info">
+          <div class="section_title">Get in touch with us</div>
+          <div class="contact_info_content">
+            <ul class="contact_info_list">
+              <li>
+                <div>Address:</div>
+                <div>Off Mama Lagos Road, Lybia, Agona Swedru, Central Region, Ghana</div>
+              </li>
+              <li>
+                  <div>Digital Address:</div>
+                  <div>CO-0013-2186</div>
+                </li>
+              <li>
+                <div>Phone:</div>
+                <div>+233 54 793 9491</div>
+                <div>+233 20 667 0703</div>
+              </li>
+              <li>
+                <div>Email:</div>
+                <div>agmschool.management@gmail.com</div>
+              </li>
+            </ul><br>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="container">
+          <!--Flash Messages-->
+          <div class="container">{% include 'includes/_message.html'%}</div>
+          <div class="section_title">Contact Form</div><br>
+          <form action=" " method="POST" class="contact_form" id="contact_form">
+              <!-- Name -->
+              <div class="col-lg-10">
+                  {{ form.name(class= "form-control contact_input", placeholder="Name")}}
+              </div>
+              <!-- Email -->
+              <div class="col-lg-10">
+                {{ form.e_mail(class= "form-control contact_input", placeholder="Email Address")}}
+              </div>
+              <div class="col-lg-10">
+                  {{ form.subject(class= "form-control contact_input", placeholder="Subject")}}
+              </div>
+            <div class="col-lg-10">
+                {{ form.message(class= "form-control contact_input", placeholder="Message")}}
+            </div>
+            <input type="submit" value="Submit" class="btn btn-secondary px-4 py-3" style="text-shadow: 2px 2px 7px #000000; background: linear-gradient(247deg, rgba(203,23,23,1) 0%, rgba(240,71,71,0.9468164336815309) 100%);border: thin #f005d0; ">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

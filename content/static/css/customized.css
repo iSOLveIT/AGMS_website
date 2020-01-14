@@ -1,0 +1,17 @@
+.error{
+    font-size: 40pt; 
+    font-weight:bolder;
+    color: #000000;
+    animation: rainbow 3s ease-in-out infinite;
+}
+
+@keyframes rainbow{
+    0%{color:#fc0202;}
+    15%{color:#fc5102;}
+    30%{color:#e6cf03;}
+    45%{color:#24d800;}
+    60%{color:#0206fc;}
+    75%{color:#8700b1;}
+    90%{color:#01cfc5;}
+    100%{color:#000000;}
+}

@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block title %} <title>500 - Internal Server Error | AGMS</title> {% endblock %}
+
+{% block error %}
+<br>
+<div class="jumbotron text-center">
+    <span class="icon icon-error" id="error"></span>
+    <img src="https://drive.google.com/uc?export=view&id=1pzFjDJ5cviJtuEe-5CCbisueMkjWkypN" alt="" class="error_img"><br><br>
+    <h1 class="error">INTERNAL SERVER ERROR</h1>
+    <a href="/home" style="color: rgba(203,23,23,1); text-decoration-line:underline; font-size:12pt;">Click on link to redirect to Homepage</a>
+</div>
+<br>
+{% endblock %}

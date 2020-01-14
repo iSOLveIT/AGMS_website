@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %} <title>Calendar | AGMS</title> {% endblock %}
+
+{% block content %}
+<!--Start PDF Page-->
+<section class="hero-wrap hero-wrap-2" style="background-image: url(https://drive.google.com/uc?export=view&id=1ObTZ_408sLpqU65d9ObOuEIINhTiPBTZ);">
+    <div class="overlay"></div>
+    <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center">
+        <h1 class="mb-2 bread" style="text-shadow: 2px 2px 7px #000000;">Academic Calendar for {{academic}}</h1>
+        <p class="breadcrumbs" style="text-shadow: 2px 2px 7px #000000;"><span class="mr-2"><a href="/home" >Home <i class="ion-ios-arrow-forward"></i></a></span> <span> Academics <i class="ion-ios-arrow-forward"></i> Calendar</span></p>
+        </div>
+    </div>
+    </div>
+</section>
+<diV class="container">
+    <iframe src="https://calendar.google.com/calendar/embed?src=39hgrm6ltunvjifo8h5uvshvm8%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no" class="calendar"></iframe>
+</div>
+<!--End PDF Page-->
+
+{% endblock %}
