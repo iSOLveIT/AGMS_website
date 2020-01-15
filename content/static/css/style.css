@@ -9944,3 +9944,11 @@ nav.navbar{
     vertical-align: middle;
     color: #ffffff;
 }
+.owl-carousel.home-slider .slider-item.first_bg{
+    background-position: center -50px;
+}
+@media (max-width: 1199.98px) {
+.owl-carousel.home-slider .slider-item.first_bg{
+    background-position: center 5px;
+}
+}
