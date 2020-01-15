@@ -69,9 +69,9 @@ def contact():
         _subject = form.subject.data
         _message = form.message.data
         
-
-        _mailSent = sendEmail(_name, _subject, _email, _message)
         replyMessage(_email, _name)
+        _mailSent = sendEmail(_name, _subject, _email, _message)
+
         if _mailSent == 'Sent':
             flash('Message sent successfully.', 'success')
             return redirect(url_for('contact'))
