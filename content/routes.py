@@ -1,9 +1,9 @@
-from flask import render_template, redirect, request, url_for, flash, Markup
-from content import app
+from flask import render_template, redirect, request, url_for, flash, Markup, jsonify, make_response
+from content import app, mongo
 #from functools import wraps
 from datetime import datetime as dt
 from .contact import sendEmail, replyMessage
-from .py_files.academic_yr import academicYr
+from .py_files.academic_yr import academicYr, numGenerator
 from .py_files.form import ContactForm
 
 
@@ -30,6 +30,27 @@ def about():
 def admission():
     _year = dt.now().strftime('%Y')
     return render_template('admission.html', _year=_year)
+
+
+# 1.Admission  Forms page
+@app.route('/admission/forms', methods=['GET', 'POST'])
+def admission_forms():
+    otp = request.args.get('OTP_input', type=str)
+    query = mongo.db.admission_form_OTP
+    data = query.find_one({'OTP': otp})
+    if data is None:
+        output = "OTP is invalid, try again."
+        return jsonify(result=output, status=404)
+    elif data['used'] == 1:
+        output = "OTP has been used."
+        return jsonify(result=output, status=404)
+    else:
+        query.update_one(
+            {'OTP': data['OTP']},
+            {'$set': {"used": 1, "date_used": dt.now()}}
+        )
+        output = 'https://forms.gle/aYAxiNCxcEwUYQyN6'
+        return jsonify(result=output, status=200)
 
 
 # GALLERY PAGE
@@ -79,6 +100,8 @@ def contact():
             error = Markup("Error Sending Message")
             return render_template('contact.html', error=error, form=form)
     return render_template('contact.html', _year=_year, form=form)
+
+
 
 
 

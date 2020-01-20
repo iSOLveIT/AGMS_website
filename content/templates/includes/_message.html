@@ -1,12 +1,10 @@
-<!--Message for registration-->
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
     {% for category, message in messages %}
-      <div class="alert alert-success{{ Success }} ">{{ message }}</div>
+
+    <div class="alert alert-{{category}} alert-dismissible"  style="display:inline; font-size: 11pt; text-align: left;" role="alert">
+      {{ message }}
+    </div>
     {% endfor %}
   {% endif %}
 {% endwith %}
-<!--Message for username and password authentication in login -->
-{% if error %}
-      <div class="alert alert-danger">{{ error }}</div>
-{% endif %}

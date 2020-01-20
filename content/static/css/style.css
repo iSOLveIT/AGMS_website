@@ -9950,5 +9950,62 @@ nav.navbar{
 @media (max-width: 1199.98px) {
 .owl-carousel.home-slider .slider-item.first_bg{
     background-position: center 5px;
+}}
+
+/* One Time Password Alert*/
+.OTP-main{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
 }
+.OTP-main > .blurred{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffda;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: 1000;
+}
+.OTP-main > .OTP-sub{
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 0px 28px -5px #777777;
+    -moz-box-shadow: 0px 0px 28px -5px #777777;
+    box-shadow: 0px 0px 28px -5px #777777;
+    z-index: 2000;
+}
+
+.card > .card-header > button{
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    float: right;
+    font-size: 14pt;
+}
+
+.card .card-body{
+    background: rgb(240,71,71);
+    background: linear-gradient(247deg, rgba(240,71,71,1) 70%, rgba(255,255,255,0.9524344112096208) 71%);
+}
+
+@media (max-width: 991.98px){
+    .OTP-main > .OTP-sub{
+        width: inherit;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+        -webkit-box-shadow: 0px 0px 28px -5px #777777;
+        -moz-box-shadow: 0px 0px 28px -5px #777777;
+        box-shadow: 0px 0px 28px -5px #777777;
+    }
+
+}
+#OTP_alert{
+    display: none;
 }

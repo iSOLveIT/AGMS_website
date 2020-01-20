@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_mail import Mail
+from flask_pymongo import PyMongo
 import urllib, os
 from dotenv import load_dotenv
 from pathlib import Path
@@ -24,6 +25,15 @@ app.config['MAIL_MAX_EMAILS'] = 1000
 
 mail = Mail(app)
 
+# Config and Instantiate Mongo
+Username = urllib.parse.quote_plus(str(os.getenv('MONGODB_USERNAME')))
+Password = urllib.parse.quote_plus(str(os.getenv('MONGODB_PASSWORD')))
+
+app.config['MONGO_URI'] = "mongodb+srv://%s:%s@website-dambo.mongodb.net/ADMIN_DB" % (Username, Password)
+app.config['MONGO_DB'] = "ADMIN_DB"
+
+# connect to MongoDB with school_DB
+mongo = PyMongo(app)
 
 
 from content import routes
