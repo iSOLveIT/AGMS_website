@@ -3,7 +3,7 @@ from content import app, mongo
 #from functools import wraps
 from datetime import datetime as dt
 from .contact import sendEmail, replyMessage
-from .py_files.academic_yr import academicYr, numGenerator
+from .py_files.academic_yr import academicYr
 from .py_files.form import ContactForm
 
 
@@ -32,7 +32,7 @@ def admission():
     return render_template('admission.html', _year=_year)
 
 
-# 1.Admission  Forms page
+# 1.Admission Forms page
 @app.route('/admission/forms', methods=['GET', 'POST'])
 def admission_forms():
     otp = request.args.get('OTP_input', type=str)
