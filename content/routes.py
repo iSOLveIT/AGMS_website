@@ -1,6 +1,5 @@
-from flask import render_template, redirect, request, url_for, flash, Markup, jsonify, make_response
+from flask import render_template, redirect, request, url_for, flash, Markup, jsonify
 from content import app, mongo
-#from functools import wraps
 from datetime import datetime as dt
 from .contact import sendEmail, replyMessage
 from .py_files.academic_yr import academicYr

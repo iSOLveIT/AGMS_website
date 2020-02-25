@@ -1,7 +1,8 @@
 from flask import Flask
 from flask_mail import Mail
 from flask_pymongo import PyMongo
-import urllib, os
+import urllib
+import os
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -38,4 +39,3 @@ mongo = PyMongo(app)
 
 from content import routes
 from content import admin
-    
