@@ -7,9 +7,9 @@ from .py_files.academic_yr import academicYr
 from .py_files.form import ContactForm
 
 
-
-
 '''/=========ROUTES===========/'''
+
+
 # HOME PAGE
 @app.route('/')
 @app.route('/home')
@@ -60,17 +60,20 @@ def future():
     _year = dt.now().strftime('%Y')
     return render_template('future.html',  _year=_year)
 
+
 # 2.Culture Awareness page
 @app.route('/gallery/culture_awareness')
 def culture():
     _year = dt.now().strftime('%Y')
     return render_template('culture.html',  _year=_year)
 
+
 # 3.School's Album page
 @app.route('/gallery/sch_album')
 def schAlbum():
     _year = dt.now().strftime('%Y')
     return render_template('schalbum.html', _year=_year)
+
 
 # 2.Calendar page
 @app.route('/academics/calendar')

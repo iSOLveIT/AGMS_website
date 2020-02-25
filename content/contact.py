@@ -24,7 +24,7 @@ def replyMessage(_email, _sender):
     mesg = Message(_subj, sender=('AGMS Contact', 'isolveitgroup@gmail.com'), recipients=[_email])
     assert mesg.sender == "AGMS Contact <isolveitgroup@gmail.com>"
     mesg.body = f'''Hello {_sender},
-The message sent by {_sender} to AGMS Contact has been received. AGMS Contact will contact you within 24 hours.
+The message sent by you to AGMS Contact has been received. AGMS Contact will contact you within 24 hours.
 
 Thank you,
 AGMS Contact.
