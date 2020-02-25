@@ -2,8 +2,8 @@ from flask import render_template, redirect, request, url_for, flash, Markup, js
 from content import app, mongo
 from datetime import datetime as dt
 from .contact import sendEmail, replyMessage
-from .py_files.academic_yr import academicYr
-from .py_files.form import ContactForm
+from .academic_yr import academicYr
+from .form import ContactForm
 
 
 '''/=========ROUTES===========/'''
