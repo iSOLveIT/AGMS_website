@@ -21,9 +21,9 @@ Date Sent:  {dt.now().strftime('%B %d, %Y, %H:%M ') + 'GMT'}
 def replyMessage(_email, _sender):
     # REPLY EMAIL
     _subj = 'Message Received'
-    mesg = Message(_subj, sender=('AGMS Contact', 'isolveitgroup@gmail.com'), recipients=[_email])
-    assert mesg.sender == "AGMS Contact <isolveitgroup@gmail.com>"
-    mesg.body = f'''Hello {_sender},
+    msg = Message(_subj, sender=('AGMS Contact', 'isolveitgroup@gmail.com'), recipients=[_email])
+    assert msg.sender == "AGMS Contact <isolveitgroup@gmail.com>"
+    msg.body = f'''Hello {_sender},
 The message sent by you to AGMS Contact has been received. AGMS Contact will contact you within 24 hours.
 
 Thank you,
@@ -31,5 +31,5 @@ AGMS Contact.
 
 Date Sent:  {dt.now().strftime('%B %d, %Y, %H:%M ') + 'GMT'}
 '''
-    mail.send(mesg)
+    mail.send(msg)
     return 'OK'
