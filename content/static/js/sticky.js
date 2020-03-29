@@ -24,26 +24,26 @@ $(document).ready(function(){
 });
 
 <!-- The jquery ajax code: -->
-$(function() {
-    $('button#OTP_send').bind('click', function() {
-      $.getJSON($SCRIPT_ROOT + '/admission/forms', {
-        OTP_input: $('input[name="inputOTP"]').val()
-      }, function(data) {
-        if (data.status === 404) {
-		    $("#OTP_msg").text(data.result);
-            $("#OTP_alert").css("display", "block");
-            $("#OTP_alert").fadeOut( 3000, "linear");
-	    } else {
-            $("#OTP_msg").text('Successful');
-            $("#OTP_alert").css("display", "block");
-            $("#OTP_alert").fadeOut( 3000, "linear", function() {
-                // Animation complete.
-                // similar behavior as an HTTP redirect
-                window.location.replace(data.result);
-            });
-	    }
-      });
-      return false;
-    });
-  });
+//$(function() {
+//    $('button#OTP_send').bind('click', function() {
+//      $.getJSON($SCRIPT_ROOT + '/admission/forms', {
+//        OTP_input: $('input[name="inputOTP"]').val()
+//      }, function(data) {
+//        if (data.status === 404) {
+//		    $("#OTP_msg").text(data.result);
+//            $("#OTP_alert").css("display", "block");
+//            $("#OTP_alert").fadeOut( 3000, "linear");
+//	    } else {
+//            $("#OTP_msg").text('Successful');
+//            $("#OTP_alert").css("display", "block");
+//            $("#OTP_alert").fadeOut( 3000, "linear", function() {
+//                // Animation complete.
+//                // similar behavior as an HTTP redirect
+//                window.location.replace(data.result);
+//            });
+//	    }
+//      });
+//      return false;
+//    });
+//  });
 
