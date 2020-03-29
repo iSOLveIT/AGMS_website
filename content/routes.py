@@ -1,5 +1,5 @@
 from flask import render_template, redirect, request, url_for, flash, Markup, jsonify
-from content import app, mongo
+from content import app
 from datetime import datetime as dt
 from .contact import sendEmail, replyMessage
 from .academic_yr import academicYr
@@ -32,7 +32,7 @@ def admission():
 
 
 # 1.Admission Forms page
-@app.route('/admission/forms', methods=['GET', 'POST'])
+"""@app.route('/admission/forms', methods=['GET', 'POST'])
 def admission_forms():
     otp = request.args.get('OTP_input', type=str)
     query = mongo.db.admission_form_OTP
@@ -50,7 +50,7 @@ def admission_forms():
         )
         output = 'https://forms.gle/aYAxiNCxcEwUYQyN6'
         return jsonify(result=output, status=200)
-
+"""
 
 # GALLERY PAGE
 # 1.Future Career page
