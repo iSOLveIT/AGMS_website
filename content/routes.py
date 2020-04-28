@@ -1,20 +1,25 @@
 from flask import render_template, redirect, request, url_for, flash, Markup, jsonify
-from content import app
+from content import app, mongo
 from datetime import datetime as dt
 from .contact import sendEmail, replyMessage
-from .academic_yr import academicYr
+from .academic_yr import academic_yr
 from .form import ContactForm
 
 
-'''/=========ROUTES===========/'''
-
-
+# =============ROUTEs==============
 # HOME PAGE
 @app.route('/')
 @app.route('/home')
 def index():
     _year = dt.now().strftime('%Y')
     return render_template('index.html', _year=_year)
+
+
+# E-LEARNING PAGE
+@app.route('/elearning')
+def elearn():
+    _year = dt.now().strftime('%Y')
+    return render_template('e_learning.html', _year=_year)
 
 
 # OUR SCHOOL PAGE
@@ -31,26 +36,26 @@ def admission():
     return render_template('admission.html', _year=_year)
 
 
-# 1.Admission Forms page
-"""@app.route('/admission/forms', methods=['GET', 'POST'])
+# 1.E-learning hub page
+@app.route('/elearning/forms', methods=['GET'])
 def admission_forms():
     otp = request.args.get('OTP_input', type=str)
-    query = mongo.db.admission_form_OTP
-    data = query.find_one({'OTP': otp})
+    data = mongo.find_one({'OTP': otp})
     if data is None:
         output = "OTP is invalid, try again."
         return jsonify(result=output, status=404)
-    elif data['used'] == 1:
-        output = "OTP has been used."
+    elif data['used'] == 3:
+        output = "OTP has expired."
         return jsonify(result=output, status=404)
     else:
-        query.update_one(
+        used = data['used'] + 1
+        mongo.update_one(
             {'OTP': data['OTP']},
-            {'$set': {"used": 1, "date_used": dt.now()}}
+            {'$set': {"used": used, "dateUsed": dt.now()}}
         )
-        output = 'https://forms.gle/aYAxiNCxcEwUYQyN6'
+        output = 'https://forms.gle/weSB7yDuJK3zsbQX9'
         return jsonify(result=output, status=200)
-"""
+
 
 # GALLERY PAGE
 # 1.Future Career page
@@ -78,7 +83,7 @@ def schAlbum():
 @app.route('/academics/calendar')
 def calendar():
     _year = dt.now().strftime('%Y')
-    return render_template('calendar.html', _year=_year, academic=academicYr())
+    return render_template('calendar.html', _year=_year, academic=academic_yr())
 
 
 # CONTACT PAGE

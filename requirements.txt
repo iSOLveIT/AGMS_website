@@ -1,11 +1,8 @@
 Flask
 Flask-Mail
-python-dateutil
 Flask-WTF
-passlib
-python-dotenv
-pathlib
 requests
 WTForms
 gunicorn
 dnspython
+pymongo

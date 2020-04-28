@@ -22,6 +22,7 @@ Use this command to install the required packages 'pip install -r requirements.t
 ## Main Pages
 ```
     - HOME ==> Welcome Page for website visitors
+    - E-LEARNING ==> Page for the distance learning education
     - OUR SCHOOL ==> Give users information about the school
     - ADMISSION ==> Page with information about admission
     - GALLERY ===> Contains pictures of the school

@@ -1,0 +1,137 @@
+{% extends 'base.html'%}
+
+{% block title %} <title>E-Learning | AGMS</title> {% endblock %}
+
+{% block content %}
+<section class="hero-wrap hero-wrap-2" style="background-image: url(https://drive.google.com/uc?export=view&id=19ql1spJkSfPqMQZz6IBccl2v9oENKIo5); ">
+  <div class="overlay"></div>
+  <div class="container">
+  <div class="row no-gutters slider-text align-items-center justify-content-center">
+    <div class="col-md-9 ftco-animate text-center">
+      <h1 class="mb-2 bread" style="text-shadow: 2px 2px 7px #000000;">E-Learning Hub</h1>
+      <p class="breadcrumbs" style="text-shadow: 2px 2px 7px #000000;"><span class="mr-2"><a href="/home" >Home <i class="ion-ios-arrow-forward"></i></a></span> <span> E-Learning<i class="ion-ios-arrow-forward"></i></span></p>
+    </div>
+  </div>
+  </div>
+  </section>
+  <br><br>
+
+<section id="content">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="jumbotron">
+                    <h3>
+                        <span class="icon icon-heart" style="background-color: transparent; color: #f04747f1; "></span> 
+                        Welcome to AGMS E-Learning Hub
+                    </h3>
+                    <div>
+                        <p>
+                            As a parent are you out of ideas as to how to get quality tuition for your child in this pandemic 🤔🤔?
+                        </p>
+                        <p>
+                            📝 Enroll your child for the Amazing Grace E-Learning Hub and 
+                            afford quality education 📚 for your child in the comfort of your home 
+                            via distance learning 🌐 
+                        </p>
+                      </div>
+      
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="jumbotron">
+
+                    <div>
+                        <p>
+                            Enroll your child by filling the E-Learning Hub Form.
+                            <span>
+                                Contact the school on ☎️ 020 667 0703 for your one-time password which 
+                                will be needed to fill the forms.
+                            </span>
+                        </p>
+                        
+                        <p>
+                            <b>
+                                Let's Educate 🧮 ourselves while at home 🏠 
+                            </b>
+                        </p>
+                        <p style="font-size: 10pt;">
+                            <b>
+                                Stay SAFE! 😷 Stay HEALTHY! 🧘 
+                                Stay at HOME🏠 to help fight against this pandemic🦠
+                            </b>
+                        </p>
+                      </div>
+      
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6" >
+              <div class="jumbotron" >
+                <h1 class="section_title">E-Learning Hub Form</h1>
+                  
+                <p>
+                    Below, is the form needed to enroll your child in the AGMS E-Learning Hub. 
+                    Simply fill it out and it will be submitted to the Administrative Director's office.
+                </p>
+                <div>
+                    <h6>E-Learning Hub Form</h6>
+                    <ul style="list-style:none;">
+                        <li>
+                            <span class="icon icon-format_list_bulleted" style="background-color: #f1f1f1; color:rgb(240, 71, 71);"></span>
+                            <a href="#" class="init" style="font-size:12pt; color:#f04747; text-decoration:none;">AGMS E-Learning Hub Application Form</a> &nbsp;
+                            <p>You can contact the school if you need help to complete and submit the form.</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div>
+                    <h6>For further inquiries:</h6>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="/contact" title="Contact Us to Enroll Child" class="btn btn-secondary px-4 py-3" style="background: linear-gradient(247deg, rgba(203,23,23,1) 0%, rgba(240,71,71,0.9468164336815309) 100%); border:none; text-shadow: 2px 2px 7px #000000; "><b>Contact Us Now</b></a></span></p>
+                </div>
+              </div>
+
+          </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="OTP-main">
+      <div class="blurred"></div>
+
+      <div class="card text-center OTP-sub">
+        <div class="card-header" >
+            <div style="float: left;" id="OTP_alert">
+                <div class="alert alert-info" id="OTP_msg" style="display:inline;font-size: 11pt; text-align: left;" role="alert"> </div>
+            </div>
+            <button type="button" class="quit btn-danger" style="display: inline;">&CircleTimes;</button>
+        </div>
+
+        <div class="card-body" style="text-align:left;">
+            <h5 class="card-title" style="text-align: center; font-weight: bolder; font-size: 18pt;">Enter password given by school</h5>
+            <h5 class="card-text" style="text-align: left; font-weight: 500; font-size: 12pt;">In order to access the E-Learning admission forms, enter the password given to you by the school</h5>
+          <form>
+                <div class="form-group ">
+                    <label for="OTP_label">OTP (One Time Password): </label>
+                    <input type="text" name="inputOTP" id="OTP_label" maxlength="7" class="form-control"
+                    placeholder="Enter OTP here ..." required>
+                </div>
+                <button type="submit" class="btn btn-danger mb-2" id="OTP_send">Submit</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+            AMAZING GRACE MONTESSORI SCHOOL
+        </div>
+    </div>
+    </div>
+
+
+
+
+ 
+{% endblock %}
