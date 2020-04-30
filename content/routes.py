@@ -53,7 +53,7 @@ def admission_forms():
             {'OTP': data['OTP']},
             {'$set': {"used": used, "dateUsed": dt.now()}}
         )
-        output = 'https://forms.gle/weSB7yDuJK3zsbQX9'
+        output = 'google_form_link'
         return jsonify(result=output, status=200)
 
 
