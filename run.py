@@ -1,6 +1,7 @@
 from content import app
 import os
 
+
 app.config['SECRET_KEY'] = os.urandom(75)
 
 # Run WEB APPLICATION

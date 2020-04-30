@@ -23,7 +23,7 @@ $(document).ready(function(){
     });
 });
 
-<!-- The jquery ajax code: -->
+//The jquery ajax code:
 $(function() {
     $('button#OTP_send').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/elearning/forms', {

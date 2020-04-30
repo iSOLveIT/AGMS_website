@@ -9,11 +9,11 @@ def sendEmail(_name, _subject, _email, _message):
     msg = Message(_subject, sender=('AGMS Contact', 'isolveitgroup@gmail.com'), recipients=[_recipient])
     assert msg.sender == "AGMS Contact <isolveitgroup@gmail.com>"
     msg.body = f'''{_message}
-
+    
 Sender's Name: {_name}
 Sender's Email: {_email}
 Date Sent:  {dt.now().strftime('%B %d, %Y, %H:%M ') + 'GMT'}
-'''
+    '''
     mail.send(msg)
     return 'Sent'
 

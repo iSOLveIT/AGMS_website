@@ -86,6 +86,7 @@ def calendar():
     return render_template('calendar.html', _year=_year, academic=academic_yr())
 
 
+
 # CONTACT PAGE
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -107,8 +108,3 @@ def contact():
             error = Markup("Error Sending Message")
             return render_template('contact.html', error=error, form=form)
     return render_template('contact.html', _year=_year, form=form)
-
-
-
-
-

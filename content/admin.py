@@ -11,11 +11,9 @@ def error_404(error):
     _error = '404'
     return render_template('error_404.html', _year=_year, _error=_error), 404
 
-
 # 2.Error_500 page
 @app.errorhandler(500)
 def error_500(error):
     _year = dt.now().strftime('%Y')
     _error = '500'
     return render_template('error_500.html', _year=_year, _error=_error), 500
-

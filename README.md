@@ -17,7 +17,9 @@
 #### Using the Gunicorn_server
 * To run the app, open the directory in a terminal, then enter the command `gunicorn -c gunicorn.conf.py run:app`
 
-* NOTE: If you intend using this project in the productive environment do not use the development server.
+* NOTE: 
+    * If you intend using this project in the productive environment do not use the development server.
+    * Make sure debug=True is cleared in a productive environment
 
 ## What does the app achieve?
 * The app is the website of a school. It gives the school an online presence.
