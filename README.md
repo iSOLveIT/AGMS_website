@@ -6,13 +6,13 @@
 
 * Create a new directory
 * Open the directory in a terminal, then enter the command `git init .`
-* Enter the command `git clone https://github.com/iSOLveIT/AGMS_website.git`
+* Enter the command `git clone https://github.com/iSOLveIT/AGMS_website.git` in the terminal
 
 * Install all dependencies in the requirements.txt file by using command `pip install -r requirements.txt`
 
 ## How to run the app
 #### Using the Flask WSGI_server
-* Inorder to run the app, open the directory in a terminal, then enter the command `python3 run.py` 
+* In order to run the app, open the directory in a terminal, then enter the command `python3 run.py` 
 
 #### Using the Gunicorn_server
 * To run the app, open the directory in a terminal, then enter the command `gunicorn -c gunicorn.conf.py run:app`
@@ -39,7 +39,6 @@
 * ACADEMICS ==> Page for academic purposes such as academice calendar, student portal, etc.
 * CONTACT ==> Page with information about location, phone lines and contact forms of the unit
 
-
 ## Directory Structure
 ![Directory Structure](./content/static/agms_tree.png)
 
@@ -47,7 +46,7 @@
 [AGMS Website](http://agmschool.org)
 
 ## Author
-* __Duodu Randy__
+* __Duodu Randy :octocat:__
 
 ### Date Created
 * _Monday, 13th May, 2019_
