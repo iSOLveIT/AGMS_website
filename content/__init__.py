@@ -23,12 +23,12 @@ mail = Mail(app)
 # Config and Instantiate Mongo
 user = str(os.environ.get('MONGODB_USERNAME'))
 pswd = str(os.environ.get('MONGODB_PASSWORD'))
-uri = f"mongodb+srv://{user}:{pswd}@agms01-vtxt7.mongodb.net/?retryWrites=true&w=majority"
+uri = f"mongodb+srv://{user}:{pswd}@example.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(uri, ssl=True, ssl_cert_reqs=ssl.CERT_NONE)
 
 # Instantiate mongodb into app
-dB = client.get_database(name='AGMS_DB')
-mongo = dB.get_collection(name='admission_form_OTP')
+dB = client.get_database(name='Database_Name')
+mongo = dB.get_collection(name='Collection_Name')
 
 from content import routes
 from content import admin
