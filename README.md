@@ -27,7 +27,7 @@
 * The app provides users with enough information about the school and how the school can be contacted
 
 
-## How the app was designed to achieve that?
+## How the app was designed?
 * The app was designed with the Python web framework called Flask. 
 * The app was designed as a package to make the code maintainable.
 * The app uses the Flask MVT architecture by having a single file for holding both the views and routes (routes.py)
